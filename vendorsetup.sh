@@ -36,6 +36,7 @@ fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export ALLOW_MISSING_DEPENDENCIES=true
+		export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
 		export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 		export LC_ALL="C"
 		export OF_VANILLA_BUILD=1
@@ -47,7 +48,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 		export OF_FL_PATH1="/system/flashlight"
 		export OF_FL_PATH2=""
     		export OF_SCREEN_H="2400"
-		export FOX_VERSION="R11.1_1"
+		export FOX_VERSION="R11.1_2"
 		export OF_CLOCK_POS=1
 		export OF_ALLOW_DISABLE_NAVBAR=0
 		export OF_USE_SYSTEM_FINGERPRINT=1
@@ -60,8 +61,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     		export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-24.3.zip
 		export OF_MAINTAINER="Johx22 & xxTurborocketxx"
 
-		#R11
-		export FOX_R11=1
 		export FOX_BUILD_TYPE=Beta
 
 		# run a process after formatting data to work-around MTP issues
